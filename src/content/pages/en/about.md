@@ -1,35 +1,34 @@
 ---
-title: About | Morethan Log
-h1: About This Blog
+title: About | Mixed Matrix Arts
+h1: About Mixed Matrix Arts
 ---
-Welcome to Morethan Log - a modern static blog template built with Astro.
 
-This template is inspired by the popular [morethan-log](https://github.com/morethanmin/morethan-log) Next.js template, but rebuilt from the ground up for Astro.
+Hey, it's **Mixed Matrix Arts** blog - your go-to resource for hands-on tutorials in software engineering and electronics!
 
-## Features
+## 🎥 What I Do
 
-- 🚀 Built with Astro for blazing-fast performance
-- 🌐 Full i18n support (English and Russian by default)
-- 📱 Responsive design that works on all devices
-- 🎨 Clean and modern UI
-- 📝 Markdown support for easy content creation
-- 🔍 Built-in search functionality
-- 📊 SEO optimized
-- 🌙 Dark mode support
+I create **step-by-step video tutorials** and **detailed guides** covering:
 
-## Getting Started
+- **Software Engineering** - Programming tutorials, best practices, and development workflows
+- **Arduino Projects** - From beginner setups to advanced sensor integrations
+- **Raspberry Pi** - Hardware projects, automation, and embedded systems
+- **Electronics** - Circuit design, microcontroller programming, and IoT devices
+- **Embedded Systems** - Real-world applications combining software and hardware
 
-1. Fork this repository
-2. Update `src/config/site.ts` with your information
-3. Replace demo content with your own
-4. Deploy to your favorite hosting platform
+## 🎯 My Mission
 
-## Tech Stack
+Make learning **accessible**, **practical**, and **engaging**. Every tutorial is designed to help you build real projects while understanding the underlying concepts.
 
-- **Framework**: Astro
-- **Language**: TypeScript/JavaScript
-- **Styling**: CSS
-- **Version Control**: Git
-- **Deployment**: Netlify/Vercel
+Whether you're a beginner taking your first steps in programming or electronics, or an experienced maker looking for new project ideas, you'll find tutorials that match your skill level.
 
-Feel free to customize this template to match your needs!
+## 📺 Find My On YouTube
+
+Subscribe to my **[YouTube channel](https://www.youtube.com/@mixedmatrixarts)** for video tutorials, project walkthroughs, and tips!
+
+## 🚀 Get Started
+
+Browse my **[Tutorials](/tutorial)** for step-by-step guides or check out my **[Projects](/projects)** to see what's possible!
+
+---
+
+_Have questions or project ideas? Connect with my on [GitHub](https://github.com/mcdominik), [Instagram](https://www.instagram.com/mixedmatrixarts/), or [TikTok](https://www.tiktok.com/@mixedmatrixarts)!_

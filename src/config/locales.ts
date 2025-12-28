@@ -5,33 +5,34 @@ export type LocaleDefinition = {
   langTag: string;
   ogLocale?: string;
   flag?: string;
-  dir?: 'ltr' | 'rtl';
+  dir?: "ltr" | "rtl";
   isDefault?: boolean;
 };
 
 const LOCALE_DEFINITIONS = [
   {
-    code: 'en',
-    label: 'English',
-    nativeLabel: 'English',
-    langTag: 'en',
-    ogLocale: 'en',
-    flag: '🇬🇧',
-    dir: 'ltr',
+    code: "en",
+    label: "English",
+    nativeLabel: "English",
+    langTag: "en",
+    ogLocale: "en",
+    flag: "🇬🇧",
+    dir: "ltr",
     isDefault: true,
   },
   {
-    code: 'ru',
-    label: 'Russian',
-    nativeLabel: 'Русский',
-    langTag: 'ru',
-    ogLocale: 'ru',
-    flag: '🇷🇺',
-    dir: 'ltr',
+    code: "pl",
+    label: "Polish",
+    nativeLabel: "Polski",
+    langTag: "pl",
+    ogLocale: "pl",
+    flag: "🇵🇱",
+    dir: "ltr",
+    isDefault: false,
   },
 ] as const satisfies readonly LocaleDefinition[];
 
-export type LocaleCode = (typeof LOCALE_DEFINITIONS)[number]['code'];
+export type LocaleCode = (typeof LOCALE_DEFINITIONS)[number]["code"];
 
 const definitionByCode = new Map<string, LocaleDefinition>();
 for (const definition of LOCALE_DEFINITIONS) {
@@ -46,30 +47,33 @@ export const DEFAULT_LOCALE = defaultDefinition.code as LocaleCode;
 export const DEFAULT_LANG_TAG = defaultDefinition.langTag;
 
 export const SUPPORTED_LOCALES = LOCALE_DEFINITIONS.map(
-  (entry) => entry.code,
+  (entry) => entry.code
 ) as LocaleCode[];
 
-export const LOCALE_MAP = SUPPORTED_LOCALES.reduce((acc, code) => {
-  const definition = definitionByCode.get(code.toLowerCase());
-  if (definition) {
-    acc[code] = definition;
-  }
-  return acc;
-}, {} as Record<LocaleCode, LocaleDefinition>);
+export const LOCALE_MAP = SUPPORTED_LOCALES.reduce(
+  (acc, code) => {
+    const definition = definitionByCode.get(code.toLowerCase());
+    if (definition) {
+      acc[code] = definition;
+    }
+    return acc;
+  },
+  {} as Record<LocaleCode, LocaleDefinition>
+);
 
 const fallbackLocale = LOCALE_MAP[DEFAULT_LOCALE];
 
 const normalizeLookupKey = (value: string) => value.toLowerCase();
 
 export const findLocaleDefinition = (
-  value: string | null | undefined,
+  value: string | null | undefined
 ): LocaleDefinition | null => {
   if (!value) {
     return null;
   }
 
   const normalized = normalizeLookupKey(value);
-  const hyphenReplaced = normalized.replace(/_/g, '-');
+  const hyphenReplaced = normalized.replace(/_/g, "-");
 
   return (
     definitionByCode.get(normalized) ??
@@ -79,14 +83,16 @@ export const findLocaleDefinition = (
 };
 
 export const resolveLocaleDefinition = (
-  value: string | null | undefined,
+  value: string | null | undefined
 ): LocaleDefinition => findLocaleDefinition(value) ?? fallbackLocale;
 
-export const resolveLocaleCode = (value: string | null | undefined): LocaleCode =>
-  resolveLocaleDefinition(value).code as LocaleCode;
+export const resolveLocaleCode = (
+  value: string | null | undefined
+): LocaleCode => resolveLocaleDefinition(value).code as LocaleCode;
 
-export const resolveLocaleLangTag = (value: string | null | undefined): string =>
-  resolveLocaleDefinition(value).langTag;
+export const resolveLocaleLangTag = (
+  value: string | null | undefined
+): string => resolveLocaleDefinition(value).langTag;
 
 export const getLocaleLabel = (code: LocaleCode): string => {
   const definition = LOCALE_MAP[code];
@@ -118,8 +124,8 @@ export const getLocaleFlag = (code: LocaleCode): string => {
 export const getLocaleLangTag = (code: LocaleCode): string =>
   LOCALE_MAP[code]?.langTag ?? code;
 
-export const getLocaleDirection = (code: LocaleCode): 'ltr' | 'rtl' =>
-  LOCALE_MAP[code]?.dir === 'rtl' ? 'rtl' : 'ltr';
+export const getLocaleDirection = (code: LocaleCode): "ltr" | "rtl" =>
+  LOCALE_MAP[code]?.dir === "rtl" ? "rtl" : "ltr";
 
 export const getOgLocale = (code: LocaleCode): string => {
   const definition = LOCALE_MAP[code];
@@ -143,5 +149,5 @@ export const LOCALE_LABELS = SUPPORTED_LOCALES.reduce(
     acc[code] = getLocaleLabel(code);
     return acc;
   },
-  {} as Record<LocaleCode, string>,
+  {} as Record<LocaleCode, string>
 );

@@ -1,13 +1,14 @@
-# Morethan-Log for Astro
+# Mixed Matrix Arts - Tutorial Website
 
-A modern, customizable blog template built with Astro. Fast, responsive, and multilingual out of the box.
+A modern, fast tutorial website built with Astro, showcasing step-by-step guides for software engineering and electronics projects.
 
-🌐 **[Live Demo](https://morethan-log-astro.sereja.com/)**
+🌐 **[Visit Website](https://mixedmatrixarts.com)** | 📺 **[YouTube Channel](https://www.youtube.com/@mixedmatrixarts)**
 
-![Morethan-Log Screenshot](screenshot.png)
+![Website Screenshot](screenshot.png)
 
-> **Inspiration:**
-> I loved the original **[morethan-log](https://github.com/morethanmin/morethan-log)** Next.js template so much that I ported it to Astro for my own site, **[sereja.com](https://sereja.com/)** \- and open-sourced the result as **[morethan-log-astro](https://github.com/JustSereja/morethan-log-astro)** so fellow Astro fans can spin up a blazing-fast blog with the same clean design in seconds.
+> **About:**
+> This website serves as a companion to the **Mixed Matrix Arts YouTube channel**, providing detailed written guides and code examples for all our video tutorials. Topics include Arduino, Raspberry Pi, embedded systems, software engineering, and electronics projects.
+
 
 ## 🚀 Features
 
@@ -571,3 +572,4 @@ This sequence:
 - Restores your own `src/config/site.ts` and `src/config/locales.ts`, keeping personal branding, locale metadata, contact links, and other secrets.
 
 Review `git status`, commit the updated files, and (optionally) create a tag for the new version of your site.
+

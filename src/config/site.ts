@@ -1,47 +1,47 @@
-import type { SiteConfig } from './types';
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from './locales';
+import type { SiteConfig } from "./types";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "./locales";
 
 const siteConfig: SiteConfig = {
   // Basic site information
-  siteUrl: 'https://morethan-log-astro.sereja.com',
+  siteUrl: "https://morethan-log-astro.sereja.com",
   title: {
-    en: 'Morethan-Log',
-    ru: 'Morethan-Log',
+    en: "Mixed Matrix Arts - Software & Electronics Tutorials",
+    pl: "Mixed Matrix Arts - Tutoriale Programowania i Elektroniki",
   },
   description: {
-    en: 'A modern blog template built with Astro - fast, responsive, and multilingual',
-    ru: 'Современный шаблон блога на Astro - быстрый, адаптивный и многоязычный',
+    en: "Step-by-step tutorials and guides for software engineering, Arduino, Raspberry Pi, and electronics projects. Learn programming, embedded systems, and hardware development through hands-on projects.",
+    pl: "Tutoriale krok po kroku i przewodniki dla programowania, Arduino, Raspberry Pi i projektów elektronicznych. Naucz się programowania, systemów wbudowanych i rozwoju sprzętu poprzez praktyczne projekty.",
   },
 
   // Author information
   author: {
     name: {
-      en: 'Sereja',
-      ru: 'Серёжа',
+      en: "Mixed Matrix Arts",
+      pl: "Mixed Matrix Arts",
     },
-    email: 'demo@morethan-log.com',
-    avatar: '/img/avatar.svg',
+    email: "mojspecjalnyadres@gmail.com",
+    avatar: "/img/avatar.webp",
     bio: {
-      en: 'Full-stack developer passionate about creating beautiful and functional web applications. Building with Astro, React, and modern web technologies.',
-      ru: 'Full-stack разработчик, увлеченный созданием красивых и функциональных веб-приложений. Работаю с Astro, React и современными веб-технологиями.',
+      en: "Creator of software engineering and electronics tutorials. Teaching Arduino, Raspberry Pi, embedded systems, and programming through YouTube videos and detailed guides.",
+      pl: "Twórca tutoriali z programowania i elektroniki. Nauczanie Arduino, Raspberry Pi, systemów wbudowanych i programowania poprzez filmy YouTube i szczegółowe przewodniki.",
     },
   },
 
   // Blog settings
   postsPerPage: 10,
-  featuredImageFallback: '/img/posts/placeholder.svg',
+  featuredImageFallback: "/img/posts/placeholder.svg",
 
   // Contact & social links
   contactLinks: [
     {
-      id: 'github',
+      id: "github",
       label: {
-        en: 'GitHub',
-        ru: 'GitHub',
+        en: "GitHub",
+        pl: "GitHub",
       },
       url: {
-        en: 'https://github.com/yourusername',
-        ru: 'https://github.com/yourusername-ru',
+        en: "https://github.com/mcdominik",
+        pl: "https://github.com/mcdominik",
       },
       iconSvg: `<svg
   stroke="currentColor"
@@ -57,98 +57,62 @@ const siteConfig: SiteConfig = {
 </svg>`,
     },
     {
-      id: 'twitter',
+      id: "linkedin",
       label: {
-        en: 'Twitter',
-        ru: 'Twitter',
+        en: "LinkedIn",
+        pl: "LinkedIn",
       },
       url: {
-        en: 'https://x.com/yourusername',
-        ru: 'https://x.com/yourusername-ru',
+        en: "https://linkedin.com/in/dom-mac",
+        pl: "https://linkedin.com/in/dom-mac",
       },
-      icon: '🐦',
+      icon: "💼",
     },
     {
-      id: 'linkedin',
+      id: "tiktok",
       label: {
-        en: 'LinkedIn',
-        ru: 'LinkedIn',
+        en: "TikTok",
+        pl: "TikTok",
       },
       url: {
-        en: 'https://linkedin.com/in/yourusername',
-        ru: 'https://linkedin.com/in/yourusername-ru',
+        en: "https://www.tiktok.com/@mixedmatrixarts",
+        pl: "https://www.tiktok.com/@mixedmatrixarts",
       },
-      icon: '💼',
+      icon: "🎵",
     },
     {
-      id: 'telegram',
+      id: "instagram",
       label: {
-        en: 'Telegram',
-        ru: 'Telegram',
+        en: "Instagram",
+        pl: "Instagram",
       },
       url: {
-        en: 'https://t.me/yourusername',
-        ru: 'https://t.me/yourusername-ru',
+        en: "https://www.instagram.com/mixedmatrixarts/",
+        pl: "https://www.instagram.com/mixedmatrixarts/",
       },
-      icon: '✈️',
+      icon: "📸",
     },
     {
-      id: 'tiktok',
+      id: "youtube",
       label: {
-        en: 'TikTok',
-        ru: 'TikTok',
+        en: "YouTube",
+        pl: "YouTube",
       },
       url: {
-        en: 'https://www.tiktok.com/@yourusername',
-        ru: 'https://www.tiktok.com/@yourusername-ru',
+        en: "https://www.youtube.com/@mixedmatrixarts",
+        pl: "https://www.youtube.com/@mixedmatrixarts",
       },
-      icon: '🎵',
-    },
-    {
-      id: 'instagram',
-      label: {
-        en: 'Instagram',
-        ru: 'Instagram',
-      },
-      url: {
-        en: 'https://www.instagram.com/yourusername/',
-        ru: 'https://www.instagram.com/yourusername-ru/',
-      },
-      icon: '📸',
-    },
-    {
-      id: 'youtube',
-      label: {
-        en: 'YouTube',
-        ru: 'YouTube',
-      },
-      url: {
-        en: 'https://www.youtube.com/@yourusername',
-        ru: 'https://www.youtube.com/@yourusername-ru',
-      },
-      icon: '▶️',
-    },
-    {
-      id: 'twitch',
-      label: {
-        en: 'Twitch',
-        ru: 'Twitch',
-      },
-      url: {
-        en: 'https://www.twitch.tv/yourusername',
-        ru: 'https://www.twitch.tv/yourusername-ru',
-      },
-      icon: '🎮',
+      icon: "▶️",
     },
   ],
 
   projects: [
     {
-      id: 'morethan-log-astro',
-      url: 'https://github.com/JustSereja/morethan-log-astro',
+      id: "prism-qr",
+      url: "https://github.com/prism-qr/prism-qr",
       label: {
-        en: 'Morethan-Log for Astro',
-        ru: 'Morethan-Log для Astro',
+        en: "Prism QR",
+        pl: "Prism QR",
       },
       iconSvg: `<svg
   stroke="currentColor"
@@ -166,52 +130,52 @@ const siteConfig: SiteConfig = {
   ],
 
   categories: {
-    blog: {
-      enabled: true,
-      path: '/blog',
-      icon: '💻',
-      label: {
-        en: 'Blog',
-        ru: 'Блог',
-      },
-      description: {
-        en: 'Personal thoughts, experiences, and insights from my journey',
-        ru: 'Личные мысли, опыт и идеи из моего путешествия',
-      },
-    },
-    technology: {
-      enabled: true,
-      path: '/technology',
-      icon: '🚀',
-      label: {
-        en: 'Technology',
-        ru: 'Технологии',
-      },
-      description: {
-        en: 'Deep dives into web development, tools, and best practices',
-        ru: 'Глубокое погружение в веб-разработку, инструменты и лучшие практики',
-      },
-    },
     projects: {
       enabled: true,
-      path: '/projects',
-      icon: '🛠️',
+      path: "/projects",
+      icon: "🛠️",
       label: {
-        en: 'Projects',
-        ru: 'Проекты',
+        en: "Projects",
+        pl: "Projekty",
       },
       description: {
-        en: 'Showcase of my work and open-source contributions',
-        ru: 'Витрина моих работ и вклада в открытый исходный код',
+        en: "Showcase of my work and open-source contributions",
+        pl: "Wystawa moich projektów i wkładu w otwarty kod źródłowy",
+      },
+    },
+    tutorial: {
+      enabled: true,
+      path: "/tutorial",
+      icon: "📚",
+      label: {
+        en: "Tutorial",
+        pl: "Tutorial",
+      },
+      description: {
+        en: "Step-by-step tutorials and guides",
+        pl: "Tutoriale krok po kroku i przewodniki",
+      },
+    },
+    guides: {
+      enabled: true,
+      path: "/guides",
+      icon: "🎓",
+      label: {
+        en: "Guides",
+        pl: "Przewodniki",
+      },
+      description: {
+        en: "Quick guides and explanations",
+        pl: "Szybkie przewodniki i wyjaśnienia",
       },
     },
   },
 
   navigation: [
     {
-      id: 'about',
-      labelKey: 'ui.about',
-      translationKey: 'about',
+      id: "about",
+      labelKey: "ui.about",
+      translationKey: "about",
     },
   ],
 
@@ -229,9 +193,9 @@ const siteConfig: SiteConfig = {
 
   // SEO & Meta tags
   seo: {
-    defaultImage: '/img/og-image.svg',
-    twitterHandle: 'astrodotbuild',
-    googleAnalytics: '',
+    defaultImage: "/img/og-image.svg",
+    twitterHandle: "astrodotbuild",
+    googleAnalytics: "",
   },
 
   // Language settings
@@ -241,34 +205,37 @@ const siteConfig: SiteConfig = {
   // Date format settings
   dateFormats: {
     en: {
-      locale: 'en-US',
+      locale: "en-US",
       options: {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       },
       compactOptions: {
-        year: '2-digit',
-        month: 'short',
-        day: 'numeric',
+        year: "2-digit",
+        month: "short",
+        day: "numeric",
       },
     },
-    ru: {
-      locale: 'ru-RU',
+    pl: {
+      locale: "pl-PL",
       options: {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       },
       compactOptions: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
+        year: "numeric",
+        month: "short",
+        day: "numeric",
       },
     },
   },
 };
 
 export default siteConfig;
-export type { SiteConfig } from './types';
-export { SUPPORTED_LOCALES, SUPPORTED_LOCALES as SUPPORTED_LANGUAGES } from './locales';
+export type { SiteConfig } from "./types";
+export {
+  SUPPORTED_LOCALES,
+  SUPPORTED_LOCALES as SUPPORTED_LANGUAGES,
+} from "./locales";
