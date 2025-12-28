@@ -34,6 +34,18 @@ const siteConfig: SiteConfig = {
   // Contact & social links
   contactLinks: [
     {
+      id: "youtube",
+      label: {
+        en: "YouTube",
+        pl: "YouTube",
+      },
+      url: {
+        en: "https://www.youtube.com/@mixed-matrix-arts",
+        pl: "https://www.youtube.com/@mixed-matrix-arts",
+      },
+      icon: "▶️",
+    },
+    {
       id: "github",
       label: {
         en: "GitHub",
@@ -69,18 +81,6 @@ const siteConfig: SiteConfig = {
       icon: "💼",
     },
     {
-      id: "tiktok",
-      label: {
-        en: "TikTok",
-        pl: "TikTok",
-      },
-      url: {
-        en: "https://www.tiktok.com/@mixedmatrixarts",
-        pl: "https://www.tiktok.com/@mixedmatrixarts",
-      },
-      icon: "🎵",
-    },
-    {
       id: "instagram",
       label: {
         en: "Instagram",
@@ -91,18 +91,6 @@ const siteConfig: SiteConfig = {
         pl: "https://www.instagram.com/mixedmatrixarts/",
       },
       icon: "📸",
-    },
-    {
-      id: "youtube",
-      label: {
-        en: "YouTube",
-        pl: "YouTube",
-      },
-      url: {
-        en: "https://www.youtube.com/@mixedmatrixarts",
-        pl: "https://www.youtube.com/@mixedmatrixarts",
-      },
-      icon: "▶️",
     },
   ],
 

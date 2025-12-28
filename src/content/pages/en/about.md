@@ -23,7 +23,7 @@ Whether you're a beginner taking your first steps in programming or electronics,
 
 ## 📺 Find My On YouTube
 
-Subscribe to my **[YouTube channel](https://www.youtube.com/@mixedmatrixarts)** for video tutorials, project walkthroughs, and tips!
+Subscribe to my **[YouTube channel](https://www.youtube.com/@mixed-matrix- arts)** for video tutorials, project walkthroughs, and tips!
 
 ## 🚀 Get Started
 
@@ -31,4 +31,4 @@ Browse my **[Tutorials](/tutorial)** for step-by-step guides or check out my **[
 
 ---
 
-_Have questions or project ideas? Connect with my on [GitHub](https://github.com/mcdominik), [Instagram](https://www.instagram.com/mixedmatrixarts/), or [TikTok](https://www.tiktok.com/@mixedmatrixarts)!_
+_Have questions or project ideas? Connect with me on [YouTube](https://www.youtube.com/@mixed-matrix-arts), [GitHub](https://github.com/mcdominik), or [Instagram](https://www.instagram.com/mixed_matrix_arts/)!_
