@@ -3,9 +3,12 @@ title: Every ESP32 Explained in 4 Minutes
 h1: Every ESP32 Explained in 4 Minutes
 description: A quick guide explaining different ESP32 boards and their features.
 date: "2024-12-28"
+image: /img/posts/every-esp32-explained.webp
 ---
 
-![Every ESP32 Explained](/img/posts/every-esp32-explained.webp)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;" src="https://www.youtube.com/embed/MYf_H0vyMxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 This is a quick guide explaining the different ESP32 board variants and their features.
 

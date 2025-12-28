@@ -3,9 +3,12 @@ title: Advanced Link Redirecting Platform
 h1: Advanced Link Redirecting Platform
 description: Dynamic QR/link redirection open-source engine with Next.js frontend and NestJS backend.
 date: "2024-12-28"
+image: /img/posts/redirecting-app.webp
 ---
 
-![Advanced Link Redirecting Platform](/img/posts/redirecting-app.webp)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;" src="https://www.youtube.com/embed/aC6Ddfss85w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 An open-source dynamic QR code and link redirection platform designed for high performance and IoT integration.
 
