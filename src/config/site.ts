@@ -136,8 +136,8 @@ const siteConfig: SiteConfig = {
       path: "/tutorial",
       icon: "📚",
       label: {
-        en: "Tutorial",
-        pl: "Tutorial",
+        en: "Tutorials",
+        pl: "Tutoriale",
       },
       description: {
         en: "Step-by-step tutorials and guides",
