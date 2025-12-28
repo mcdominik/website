@@ -181,7 +181,7 @@ const siteConfig: SiteConfig = {
 
   // SEO & Meta tags
   seo: {
-    defaultImage: "/img/og-image.svg",
+    defaultImage: "/img/avatar.webp",
     twitterHandle: "mixedmatrixarts",
     googleAnalytics: "",
   },
