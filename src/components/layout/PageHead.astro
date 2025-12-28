@@ -51,24 +51,28 @@ const {
 }: PageHeadProps = Astro.props;
 
 const currentLocaleDefinition = resolveLocaleDefinition(lang);
+const localeCode = currentLocaleDefinition.code as 'en' | 'pl';
 const siteTitle =
-  siteConfig.title[currentLocaleDefinition.code] ??
-  siteConfig.title[DEFAULT_LOCALE] ??
-  Object.values(siteConfig.title)[0];
+  (typeof siteConfig.title === 'string' ? siteConfig.title : siteConfig.title[localeCode]) ??
+  (typeof siteConfig.title === 'string' ? siteConfig.title : siteConfig.title[DEFAULT_LOCALE]) ??
+  (typeof siteConfig.title === 'string' ? siteConfig.title : Object.values(siteConfig.title)[0]);
 const descriptionContent = description ?? fallbackDescription;
 const rssTitleDefault =
-  siteConfig.title[DEFAULT_LOCALE] ??
-  siteConfig.title[currentLocaleDefinition.code] ??
-  Object.values(siteConfig.title)[0];
-const ogLocale = getOgLocale(currentLocaleDefinition.code);
+  (typeof siteConfig.title === 'string' ? siteConfig.title : siteConfig.title[DEFAULT_LOCALE]) ??
+  (typeof siteConfig.title === 'string' ? siteConfig.title : siteConfig.title[localeCode]) ??
+  (typeof siteConfig.title === 'string' ? siteConfig.title : Object.values(siteConfig.title)[0]);
+const ogLocale = getOgLocale(localeCode);
 const isArticle = ogType === 'article';
 const articleAuthor =
   authorName ??
-  siteConfig.author.name[currentLocaleDefinition.code] ??
-  siteConfig.author.name[DEFAULT_LOCALE] ??
-  Object.values(siteConfig.author.name)[0];
+  (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : siteConfig.author.name[localeCode]) ??
+  (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : siteConfig.author.name[DEFAULT_LOCALE]) ??
+  (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : Object.values(siteConfig.author.name)[0]);
 const publishedTime = publishedAt ?? null;
 const modifiedTime = modifiedAt ?? publishedTime;
+
+const toAbsolute = (url?: string) =>
+  url ? new URL(url.replace(/\/$/, ''), baseDomain).toString() : undefined;
 
 ---
 <head>
@@ -87,6 +91,7 @@ const modifiedTime = modifiedAt ?? publishedTime;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   {enableCodeHighlight && (
     <>
       <link rel="preconnect" href="https://cdnjs.cloudflare.com/" />
@@ -181,5 +186,43 @@ gtag('js', new Date());
 gtag('config', '${siteConfig.seo.googleAnalytics}');`}
       </script>
     </>
+  )}
+
+  <script type="application/ld+json" set:html={JSON.stringify(
+    isArticle
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": title,
+          "image": [toAbsolute(ogImage)],
+          "datePublished": publishedTime,
+          "dateModified": modifiedTime,
+          "author": [{
+              "@type": "Person",
+              "name": articleAuthor,
+              "url": toAbsolute("/about")
+          }]
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": siteTitle,
+          "url": baseDomain,
+        }
+  )} />
+
+  {!isArticle && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : siteConfig.author.name[localeCode]) ?? (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : siteConfig.author.name[DEFAULT_LOCALE]) ?? (typeof siteConfig.author.name === 'string' ? siteConfig.author.name : Object.values(siteConfig.author.name)[0]),
+      "url": baseDomain,
+      "logo": toAbsolute(siteConfig.author.avatar),
+      "description": (typeof siteConfig.description === 'string' ? siteConfig.description : siteConfig.description[localeCode]) ?? (typeof siteConfig.description === 'string' ? siteConfig.description : siteConfig.description[DEFAULT_LOCALE]) ?? (typeof siteConfig.description === 'string' ? siteConfig.description : Object.values(siteConfig.description)[0]),
+      "sameAs": siteConfig.contactLinks.map(link => {
+        const url = link.url;
+        return (typeof url === 'string' ? url : url[localeCode]) ?? (typeof url === 'string' ? url : url[DEFAULT_LOCALE]) ?? (typeof url === 'string' ? url : Object.values(url)[0]);
+      }).filter(Boolean),
+    })} />
   )}
 </head>

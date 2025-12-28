@@ -3,10 +3,10 @@ import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "./locales";
 
 const siteConfig: SiteConfig = {
   // Basic site information
-  siteUrl: "https://morethan-log-astro.sereja.com",
+  siteUrl: "https://mixedmatrixarts.com",
   title: {
-    en: "Mixed Matrix Arts - Software & Electronics Tutorials",
-    pl: "Mixed Matrix Arts - Tutoriale Programowania i Elektroniki",
+    en: "Software & Electronics Tutorials",
+    pl: "Tutoriale Programowania i Elektroniki",
   },
   description: {
     en: "Step-by-step tutorials and guides for software engineering, Arduino, Raspberry Pi, and electronics projects. Learn programming, embedded systems, and hardware development through hands-on projects.",
@@ -194,7 +194,7 @@ const siteConfig: SiteConfig = {
   // SEO & Meta tags
   seo: {
     defaultImage: "/img/og-image.svg",
-    twitterHandle: "astrodotbuild",
+    twitterHandle: "mixedmatrixarts",
     googleAnalytics: "",
   },
 

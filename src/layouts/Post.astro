@@ -95,6 +95,31 @@ const alternates = (() => {
 
   return entries;
 })();
+
+const breadcrumbList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": siteConfig.title[lang] ?? siteConfig.title[DEFAULT_LOCALE] ?? Object.values(siteConfig.title)[0],
+      "item": siteConfig.siteUrl
+    },
+    ...(categoryConfig ? [{
+      "@type": "ListItem",
+      "position": 2,
+      "name": categoryLabel,
+      "item": new URL(translatePath(getCategoryPath(categoryKey)), siteConfig.siteUrl).toString()
+    }] : []),
+    {
+      "@type": "ListItem",
+      "position": categoryConfig ? 3 : 2,
+      "name": entry.data.title,
+      "item": new URL(getPostPermalink(entry), siteConfig.siteUrl).toString()
+    }
+  ]
+};
 ---
 <Layout
   title={entry.data.title}
@@ -166,6 +191,8 @@ const alternates = (() => {
   </div>
 
   {headings.length > 0 && <FloatingTOC headings={headings} lang={lang} />}
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />
 
   {siteConfig.features.imageLightbox && (
     <>

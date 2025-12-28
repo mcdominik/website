@@ -38,7 +38,7 @@ const fallbackTexts: UiDictionary = {
   "ui.ai_warning":
     "The content of this material is written or translated using AI",
   "ui.contents": "Contents",
-  "ui.all_posts": "All Posts",
+  "ui.all_posts": "Mixed Matrix Arts Tutorials",
 };
 
 const getLocalizedValue = <T>(
@@ -99,7 +99,7 @@ const localeOverrides: Partial<Record<LocaleCode, Partial<UiDictionary>>> = {
     "ui.ai_warning":
       "Treść tego materiału została napisana lub przetłumaczona przy użyciu AI",
     "ui.contents": "Spis treści",
-    "ui.all_posts": "Wszystkie posty",
+    "ui.all_posts": "Tutoriale Mixed Matrix Arts",
     "ui.blog_posts": "Blog",
     "ui.technology_posts": "Posty o technologii",
     "ui.projects_title": "Projekty",
@@ -150,7 +150,7 @@ const buildDictionary = (code: LocaleCode): UiDictionary => {
   const overrides = localeOverrides[code] ?? {};
   return {
     ...base,
-    ...overrides,
+    ...(overrides as UiDictionary),
   };
 };
 

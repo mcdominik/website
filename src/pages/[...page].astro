@@ -14,7 +14,7 @@ const posts = page.data as PostEntry[];
 const lang = DEFAULT_LOCALE;
 ---
 <PostsList
-  title={`${siteConfig.title[lang]} — ${siteConfig.description[lang]}`}
+  title={siteConfig.title[lang]}
   description={siteConfig.author.bio[lang]}
   posts={posts}
   page={page}

@@ -38,10 +38,39 @@ export default defineConfig({
     }),
     sitemap({
       filter: (page) => !page.includes('404'),
-      serialize: (item) => ({
-        ...item,
-        url: item.url.endsWith('/') ? item.url : `${item.url}/`,
-      }),
+      serialize: (item) => {
+        const url = item.url.endsWith('/') ? item.url : `${item.url}/`;
+        const isHomepage = url === siteUrl + '/';
+        const isLanguageRoot = languages.some(lang => url === `${siteUrl}/${lang}/`);
+        const isCategoryPage = url.match(/\/(projects|tutorial|guides)\/$/);
+        
+        let changefreq = 'monthly';
+        let priority = 0.5;
+        
+        if (isHomepage) {
+          changefreq = 'weekly';
+          priority = 1.0;
+        } else if (isLanguageRoot) {
+          changefreq = 'weekly';
+          priority = 0.9;
+        } else if (isCategoryPage) {
+          changefreq = 'weekly';
+          priority = 0.8;
+        } else if (url.includes('/about')) {
+          changefreq = 'monthly';
+          priority = 0.7;
+        } else {
+          changefreq = 'monthly';
+          priority = 0.6;
+        }
+        
+        return {
+          ...item,
+          url,
+          changefreq,
+          priority,
+        };
+      },
     }),
   ],
   vite: {
