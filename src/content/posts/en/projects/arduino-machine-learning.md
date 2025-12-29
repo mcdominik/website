@@ -1,6 +1,6 @@
 ---
 title: Arduino runs Machine Learning Model (TensorflowLite/LiteRT)
-h1: Arduino runs Machine Learning Model (TensorflowLite/LiteRT)
+h1: How to Run Machine Learning Model on Arduino?
 description: How to run machine learning model on Arduino using TensorflowLite/LiteRT.
 date: "2025-01-21"
 image: /img/posts/arduino-machine-learning.webp

@@ -1,6 +1,6 @@
 ---
 title: Arduino uruchamia model uczenia maszynowego (TensorflowLite/LiteRT)
-h1: Arduino uruchamia model uczenia maszynowego (TensorflowLite/LiteRT)
+h1: Jak uruchomić model uczenia maszynowego na Arduino?
 description: Jak uruchomić model uczenia maszynowego na Arduino przy użyciu TensorflowLite/LiteRT.
 date: "2025-01-21"
 image: /img/posts/arduino-machine-learning.webp
