@@ -2,7 +2,7 @@
 title: Każdy ESP32 wyjaśniony w 4 minuty
 h1: Każdy ESP32 wyjaśniony w 4 minuty
 description: Szybki przewodnik wyjaśniający różne płytki ESP32 i ich funkcje.
-date: "2024-12-28"
+date: "2025-12-27"
 image: /img/posts/every-esp32-explained.webp
 ---
 

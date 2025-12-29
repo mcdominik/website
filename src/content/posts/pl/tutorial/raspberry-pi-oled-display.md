@@ -2,7 +2,7 @@
 title: Raspberry Pi z wyświetlaczem OLED
 h1: Raspberry Pi z wyświetlaczem OLED
 description: Minimalny tutorial do konfiguracji wyświetlacza OLED z Raspberry Pi.
-date: "2024-12-28"
+date: "2025-05-22"
 image: /img/posts/arduino-oled.webp
 ---
 

@@ -2,7 +2,7 @@
 title: Raspberry Pi with Servo Motors
 h1: Raspberry Pi with Servo Motors
 description: A minimal tutorial for controlling servo motors with Raspberry Pi.
-date: "2024-12-28"
+date: "2025-02-09"
 image: /img/posts/raspberry-servo.webp
 ---
 

@@ -2,7 +2,7 @@
 title: Arduino with LED Display (I2C)
 h1: Arduino with LED Display (I2C)
 description: A minimal tutorial for setting up an LED display with Arduino using I2C.
-date: "2024-12-28"
+date: "2025-11-06"
 image: /img/posts/arudino-led.webp
 ---
 

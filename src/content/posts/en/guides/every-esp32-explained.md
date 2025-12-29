@@ -2,7 +2,7 @@
 title: Every ESP32 Explained in 4 Minutes
 h1: Every ESP32 Explained in 4 Minutes
 description: A quick guide explaining different ESP32 boards and their features.
-date: "2024-12-28"
+date: "2025-12-27"
 image: /img/posts/every-esp32-explained.webp
 ---
 

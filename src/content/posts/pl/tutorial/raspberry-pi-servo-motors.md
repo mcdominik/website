@@ -2,7 +2,7 @@
 title: Raspberry Pi z silnikami servo
 h1: Raspberry Pi z silnikami servo
 description: Minimalny tutorial do sterowania silnikami servo za pomocą Raspberry Pi.
-date: "2024-12-28"
+date: "2025-02-09"
 image: /img/posts/raspberry-servo.webp
 ---
 
