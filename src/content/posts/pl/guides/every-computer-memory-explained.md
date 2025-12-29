@@ -1,6 +1,6 @@
 ---
-title: Każda pamięć komputerowa wyjaśniona w 8 minut
-h1: Jaka pamięć komputerowa jest ważna dla mojego projektu?
+title: Jaka pamięć komputerowa jest ważna dla mojego projektu?
+h1: Każda pamięć komputerowa wyjaśniona w 8 minut
 description: Szybki przewodnik wyjaśniający różne rodzaje pamięci komputerowej i ich cechy.
 date: "2025-12-29"
 image: /img/posts/every-computer-memory-explained.webp

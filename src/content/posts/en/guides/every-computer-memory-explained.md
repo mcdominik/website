@@ -1,6 +1,6 @@
 ---
-title: Every Computer Memory Explained in 8 Minutes
-h1: Which Computer Memory Is Important For My Project?
+title: Which Computer Memory Is Important For My Project?
+h1: Every Computer Memory Explained in 8 Minutes
 description: A quick guide explaining different computer memory types and their features.
 date: "2025-12-29"
 image: /img/posts/every-computer-memory-explained.webp

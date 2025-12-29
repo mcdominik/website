@@ -1,5 +1,5 @@
 ---
-title: Every Display Type Explained in 5 Minutes
+title: Which Display Should I Buy?
 h1: Every Display Type Explained in 5 Minutes
 description: A quick guide explaining different display types and their features.
 date: "2025-10-01"

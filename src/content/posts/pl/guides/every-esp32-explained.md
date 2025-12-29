@@ -1,5 +1,5 @@
 ---
-title: Każdy ESP32 wyjaśniony w 4 minuty
+title: Jakie ESP32 Powinienem Kupić?
 h1: Każdy ESP32 wyjaśniony w 4 minuty
 description: Szybki przewodnik wyjaśniający różne płytki ESP32 i ich funkcje.
 date: "2025-12-27"

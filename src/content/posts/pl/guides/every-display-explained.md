@@ -1,5 +1,5 @@
 ---
-title: Każdy typ wyświetlacza wyjaśniony w 5 minut
+title: Jaki Wyświetlacz Powinienem Kupić?
 h1: Każdy typ wyświetlacza wyjaśniony w 5 minut
 description: Szybki przewodnik wyjaśniający różne typy wyświetlaczy i ich funkcje.
 date: "2025-10-01"

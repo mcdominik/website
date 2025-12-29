@@ -1,5 +1,5 @@
 ---
-title: Every ESP32 Explained in 4 Minutes
+title: Which ESP32 Should I Buy?
 h1: Every ESP32 Explained in 4 Minutes
 description: A quick guide explaining different ESP32 boards and their features.
 date: "2025-12-27"

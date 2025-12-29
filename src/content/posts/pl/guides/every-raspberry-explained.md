@@ -1,6 +1,6 @@
 ---
-title: Każdy Raspberry Pi wyjaśniony w 5 minut
-h1: Które Raspberry Pi powinienem kupić?
+title: Które Raspberry Pi powinienem kupić?
+h1: Każdy Raspberry Pi wyjaśniony w 5 minut
 description: Szybki przewodnik wyjaśniający różne modele Raspberry Pi i ich cechy.
 date: "2025-05-16"
 image: /img/posts/every-raspberry-explained.webp
