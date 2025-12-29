@@ -99,7 +99,7 @@ const localeOverrides: Partial<Record<LocaleCode, Partial<UiDictionary>>> = {
     "ui.ai_warning":
       "Treść tego materiału została napisana lub przetłumaczona przy użyciu AI",
     "ui.contents": "Spis treści",
-    "ui.all_posts": "Tutoriale Mixed Matrix Arts",
+    "ui.all_posts": "Tutoriale Programowania i Elektroniki",
     "ui.blog_posts": "Blog",
     "ui.technology_posts": "Posty o technologii",
     "ui.projects_title": "Projekty",
