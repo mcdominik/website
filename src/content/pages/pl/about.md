@@ -5,7 +5,7 @@ h1: O Mixed Matrix Arts
 
 Cześć, tutaj **Mixed Matrix Arts** - Twoje źródle praktycznych tutoriali z programowania i elektroniki!
 
-## 🎥 Czym się zajmuje
+## 🎥 Czym się zajmuję
 
 Tworzę **tutoriale wideo krok po kroku** oraz **szczegółowe przewodniki** obejmujące:
 
@@ -23,11 +23,11 @@ Niezależnie od tego, czy jesteś początkującym, który stawia pierwsze kroki 
 
 ## 📺 Znajdź mnie na YouTube
 
-Subskrybuj nasz **[kanał YouTube](https://www.youtube.com/@mixed-matrix-arts)** po tutoriale wideo, omówienia projektów i wskazówki!
+Subskrybuj mój **[kanał YouTube](https://www.youtube.com/@mixed-matrix-arts)** po tutoriale wideo, omówienia projektów i wskazówki!
 
 ## 🚀 Zaczynajmy
 
-Przeglądaj moje **[Tutoriale](/pl/tutorial)** po przewodniki krok po kroku lub sprawdź nasze **[Projekty](/pl/projects)**, aby zobaczyć, co jest możliwe!
+Przeglądaj moje **[Tutoriale](/pl/tutorial)** po przewodniki krok po kroku lub sprawdź moje **[Projekty](/pl/projects)**, aby zobaczyć, co jest możliwe!
 
 ---
 
