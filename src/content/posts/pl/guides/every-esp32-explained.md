@@ -39,7 +39,4 @@ Poznaj kluczowe funkcje i specyfikacje każdego wariantu ESP32.
 
 Dowiedz się, która płytka ESP32 jest najlepsza dla Twojego projektu.
 
-## Podsumowanie
-
-Teraz rozumiesz różne płytki ESP32 i możesz wybrać odpowiednią dla swoich potrzeb.
 

@@ -38,8 +38,3 @@ Learn about the key features and specifications of each ESP32 variant.
 ## Choosing the Right Board
 
 Find out which ESP32 board is best for your project.
-
-## Conclusion
-
-You now understand the different ESP32 boards and can choose the right one for your needs.
-

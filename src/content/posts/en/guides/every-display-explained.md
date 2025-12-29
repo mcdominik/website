@@ -39,8 +39,3 @@ Learn about the key features and specifications of each display type.
 ## Choosing the Right Display
 
 Find out which display is best for your project.
-
-## Conclusion
-
-You now understand the different display types and can choose the right one for your needs.
-

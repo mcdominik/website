@@ -40,6 +40,3 @@ Poznaj kluczowe cechy i specyfikacje każdego typu wyświetlacza.
 
 Dowiedz się, który wyświetlacz jest najlepszy dla Twojego projektu.
 
-## Podsumowanie
-
-Teraz rozumiesz różne typy wyświetlaczy i możesz wybrać odpowiedni dla swoich potrzeb.
