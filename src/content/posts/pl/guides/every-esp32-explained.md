@@ -15,6 +15,17 @@ To jest szybki przewodnik wyjaśniający różne warianty płytek ESP32 i ich fu
 ## Przegląd
 
 Zrozum różnice między różnymi płytkami ESP32 w zaledwie 4 minuty.
+To wideo omawia następujące tematy:
+
+00:00 Wstęp
+00:19 Czym jest ESP?
+00:47 SoC vs Moduły vs Płytki
+1:32 ESP8266 
+1:53 Seria ESP32 S
+2:37 Seria ESP32 C
+3:13 Seria ESP32 H
+3:33 Seria ESP32 Classic
+4:00 Podsumowanie
 
 ## Warianty ESP32
 

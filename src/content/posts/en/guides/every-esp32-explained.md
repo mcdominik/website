@@ -15,6 +15,17 @@ This is a quick guide explaining the different ESP32 board variants and their fe
 ## Overview
 
 Understand the differences between various ESP32 boards in just 4 minutes.
+This video covers the following topics:
+
+00:00 Intro
+00:19 What is ESP?
+00:47 SoC vs Modules vs Boards
+1:32 ESP8266 
+1:53 ESP32 S Series
+2:37 ESP32 C Series
+3:13 ESP32 H Series
+3:33 ESP32 Classic Series
+4:00 Summary
 
 ## ESP32 Variants
 
