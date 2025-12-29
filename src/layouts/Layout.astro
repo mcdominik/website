@@ -21,6 +21,7 @@ import { getLangFromUrl, useTranslations, useTranslatedPath } from '@i18n/utils'
 import PageHead from '@components/layout/PageHead.astro';
 import SiteHeader from '@components/layout/SiteHeader.astro';
 import MobileMenu from '@components/layout/MobileMenu.astro';
+import PostHog from '@components/posthog.astro';
 
 type AlternateLink = {
   lang: string;
@@ -265,7 +266,7 @@ function isPostListPage(): boolean {
 
   const categoryPattern = categories.map(escapeRegExp).join('|');
   const categoryRegex = new RegExp(
-    `^/(?:${localePathPattern}/)?(${categoryPattern})(/\\d+/?)?$`
+    `^/(?:${localePathPattern}/)?(${categoryPattern})(/\\d+/?)?`
   );
   return categoryRegex.test(pathname);
 }
@@ -392,26 +393,29 @@ const navItems = await resolveNavItems();
 ---
 <!DOCTYPE html>
 <html lang={htmlLang} dir={htmlDir}>
-  <PageHead
-    lang={lang}
-    title={metaTitle}
-    description={metaDescription}
-    keywords={keywords}
-    canonicalUrl={canonicalUrl}
-    alternates={normalizedAlternates}
-    prev={prevAbsolute}
-    next={nextAbsolute}
-    ogImage={ogImage}
-    twitterHandle={twitterHandle}
-    baseDomain={baseDomain}
-    fallbackDescription={fallbackDescription}
-    enableCodeHighlight={enableCodeHighlight}
-    ogType={ogType}
-    publishedAt={publishedAt}
-    modifiedAt={modifiedAt}
-    authorName={authorName}
-    section={section}
-  />
+  <head>
+    <PageHead
+      lang={lang}
+      title={metaTitle}
+      description={metaDescription}
+      keywords={keywords}
+      canonicalUrl={canonicalUrl}
+      alternates={normalizedAlternates}
+      prev={prevAbsolute}
+      next={nextAbsolute}
+      ogImage={ogImage}
+      twitterHandle={twitterHandle}
+      baseDomain={baseDomain}
+      fallbackDescription={fallbackDescription}
+      enableCodeHighlight={enableCodeHighlight}
+      ogType={ogType}
+      publishedAt={publishedAt}
+      modifiedAt={modifiedAt}
+      authorName={authorName}
+      section={section}
+    />
+    <PostHog />
+  </head>
   <body>
     <div class="page">
       <SiteHeader
