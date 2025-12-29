@@ -38,7 +38,7 @@ const fallbackTexts: UiDictionary = {
   "ui.ai_warning":
     "The content of this material is written or translated using AI",
   "ui.contents": "Contents",
-  "ui.all_posts": "Mixed Matrix Arts Tutorials",
+  "ui.all_posts": "Software & Electronics Tutorials",
 };
 
 const getLocalizedValue = <T>(
