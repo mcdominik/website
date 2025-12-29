@@ -2,7 +2,7 @@
 title: Zaawansowana platforma przekierowań linków
 h1: Zaawansowana platforma przekierowań linków
 description: Otwartoźródłowy engine do dynamicznych kodów QR/przekierowań z frontendem Next.js i backendem NestJS.
-date: "2024-12-28"
+date: "2025-11-26"
 image: /img/posts/redirecting-app.webp
 ---
 

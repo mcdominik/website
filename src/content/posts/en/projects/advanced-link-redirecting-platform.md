@@ -2,7 +2,7 @@
 title: Advanced Link Redirecting Platform
 h1: Advanced Link Redirecting Platform
 description: Dynamic QR/link redirection open-source engine with Next.js frontend and NestJS backend.
-date: "2024-12-28"
+date: "2025-11-26"
 image: /img/posts/redirecting-app.webp
 ---
 
