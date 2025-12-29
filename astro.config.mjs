@@ -42,11 +42,11 @@ export default defineConfig({
         const url = item.url.endsWith('/') ? item.url : `${item.url}/`;
         const isHomepage = url === siteUrl + '/';
         const isLanguageRoot = languages.some(lang => url === `${siteUrl}/${lang}/`);
-        const isCategoryPage = url.match(/\/(projects|tutorial|guides)\/$/);
-        
+        const isCategoryPage = url.match(/\/(projects|tutorials|guides)\/$/);
+
         let changefreq = 'monthly';
         let priority = 0.5;
-        
+
         if (isHomepage) {
           changefreq = 'weekly';
           priority = 1.0;
@@ -63,7 +63,7 @@ export default defineConfig({
           changefreq = 'monthly';
           priority = 0.6;
         }
-        
+
         return {
           ...item,
           url,

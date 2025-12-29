@@ -131,9 +131,9 @@ const siteConfig: SiteConfig = {
         pl: "Wystawa moich projektów i wkładu w otwarty kod źródłowy",
       },
     },
-    tutorial: {
+    tutorials: {
       enabled: true,
-      path: "/tutorial",
+      path: "/tutorials",
       icon: "📚",
       label: {
         en: "Tutorials",

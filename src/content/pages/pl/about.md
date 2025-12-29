@@ -27,7 +27,7 @@ Subskrybuj mój **[kanał YouTube](https://www.youtube.com/@mixed-matrix-arts)**
 
 ## 🚀 Zaczynajmy
 
-Przeglądaj moje **[Tutoriale](/pl/tutorial)** po przewodniki krok po kroku lub sprawdź moje **[Projekty](/pl/projects)**, aby zobaczyć, co jest możliwe!
+Przeglądaj moje **[Tutoriale](/pl/tutorials)** po przewodniki krok po kroku lub sprawdź moje **[Projekty](/pl/projects)**, aby zobaczyć, co jest możliwe!
 
 ---
 
