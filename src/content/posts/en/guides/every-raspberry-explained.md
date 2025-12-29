@@ -1,6 +1,6 @@
 ---
-title: Every Raspberry Pi Explained in 5 Minutes
-h1: Which Raspberry Pi Should I Buy?
+title: Which Raspberry Pi Should I Buy?
+h1: Every Raspberry Pi Explained in 5 Minutes
 description: A quick guide explaining different Raspberry Pi models and their features.
 date: "2025-05-16"
 image: /img/posts/every-raspberry-explained.webp
