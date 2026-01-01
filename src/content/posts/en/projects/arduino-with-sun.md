@@ -12,10 +12,6 @@ image: /img/posts/raspberry-with-sun.webp
 
 This project demonstrates how to create a **fully solar-powered AI system** using a Raspberry Pi Zero 2W, running a small LLM (Large Language Model) with pure solar energy and intelligent battery management. This setup provides a sustainable, off-grid solution for hosting AI applications without relying on traditional power sources.
 
-## Overview
-
-In this guide, I show you how to build a complete solar-powered Raspberry Pi system that can run small AI workloads continuously or not AI, it's gonna work even better for smart home hubs or http servers etc. The manager uses battery manager with MPPT, which increases total output power.
-
 ## Requirements
 
 - Raspberry Pi (I'm using Zero 2W)
@@ -23,19 +19,13 @@ In this guide, I show you how to build a complete solar-powered Raspberry Pi sys
 - some baterry manager (I'm using DF Robot Sun Power Manager 5v 1.1)
 - solar panel (I'm using monocrystalline Solar Panel 5V / 1A)
 
-**Video Timestamps:**
+## Overview
 
-- 00:00 - Intro
-- 00:13 - Teaser
-- 00:32 - Brain and heart overview
-- 00:54 - Introduction theory about sun and solar
-- 1:52 - Why sun energy is cool
-- 2:55 - AI model overview
-- 3:15 - Set-up
-- 3:57 - Raw system test
-- 4:23 - Add battery and manager
-- 5:13 - Final result
-- 6:45 - Outro
+In this project, I set out to prove that you can run modern artificial intelligence—specifically Large Language Models—entirely off-grid using nothing but solar energy. The core of the system is a Raspberry Pi Zero 2W, a remarkably small but capable "brain" that I powered using a 6W photovoltaic solar module. To make the AI functional on such limited hardware (512MB of RAM), I utilized Ollama to run a highly optimized, 8-bit quantized version of the unsloth model (135M parameters), which proved to be surprisingly responsive for basic queries.
+
+During the build, I addressed the inherent limitations of solar power, such as energy inconsistency due to weather and location. While a direct connection from the panel to the Pi worked in peak sunlight, the system would instantly crash if a single cloud passed over. To solve this, I integrated a backup power layer consisting of a LiPo battery and a DFRobot Sun Power Manager. This board is crucial because it features MPPT (Maximum Power Point Tracking), a technology that optimizes the voltage to extract the maximum possible power from the panel—increasing efficiency by up to 30%. [MPPT details](https://en.wikipedia.org/wiki/Maximum_power_point_tracking)
+
+The final results provided a fascinating look at "green" AI performance. Under a heavy load, the Raspberry Pi consumes about 2.5W, and my calculations showed that 10 hours of sunlight could harvest enough energy for roughly 4 to 5 hours of continuous AI generation. While a model of this size has its limits, the project successfully demonstrates a blueprint for autonomous, silent, and sustainable computing in remote locations where the power grid simply can't reach.
 
 ## Why Solar Power for Raspberry Pi?
 
@@ -47,24 +37,6 @@ Solar energy offers several compelling advantages for powering embedded systems 
 - **Cost-Effective**: After initial investment, energy is completely free
 - **Educational Value**: Learn about energy management and sustainable technology
 - **Reliability**: With proper battery backup, the system runs 24/7
-
-## Power Considerations
-
-Running an AI model on solar power requires careful power management:
-
-- **Solar Panel Sizing**: Must provide enough power during daylight to run the system AND charge batteries
-- **Battery Capacity**: Should store enough energy for overnight operation
-- **Efficiency**: Optimize software to minimize power consumption
-
-## Challenges and Solutions
-
-### Challenge: Limited Processing Power
-
-**Solution**: Use heavily quantized models and optimize inference parameters for the Pi Zero 2W's capabilities.
-
-### Challenge: Weather Dependency
-
-**Solution**: Size the battery pack large enough to handle several days of poor weather conditions.
 
 ## Results
 
@@ -100,12 +72,10 @@ The key takeaways:
 
 This represents a step toward more environmentally friendly computing and demonstrates that renewable energy can power even computationally demanding applications like AI inference.
 
-## Limitation
+For more details, code snippets, and component links, check the video description.
+
+## Limitations
 
 Don't expect to host ChatGPT there, it has 512MB RAM :D
 
-## Resources
 
-Watch the full video tutorial: [Raspberry Pi Powered by Solar Energy - Running LLM](https://youtu.be/nEuxC46m250)
-
-For more details, code snippets, and component links, check the video description.

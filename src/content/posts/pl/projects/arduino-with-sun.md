@@ -12,10 +12,6 @@ image: /img/posts/raspberry-with-sun.webp
 
 Ten projekt demonstruje, jak stworzyć **w pełni zasilany energią słoneczną system AI** używając Raspberry Pi Zero 2W, uruchamiający mały LLM (Large Language Model) z czystą energią słoneczną i inteligentnym zarządzaniem baterią. To rozwiązanie zapewnia zrównoważony, off-gridowy system do hostowania aplikacji AI bez polegania na tradycyjnych źródłach energii.
 
-## Przegląd
-
-W tym przewodniku pokazuję, jak zbudować kompletny system Raspberry Pi zasilany energią słoneczną, który może uruchamiać małe obciążenia AI w sposób ciągły, lub nie AI - będzie działać jeszcze lepiej dla hubów smart home lub serwerów HTTP itp. Menedżer wykorzystuje menedżer baterii z MPPT, który zwiększa całkowitą moc wyjściową.
-
 ## Wymagania
 
 - Raspberry Pi (używam Zero 2W)
@@ -23,19 +19,14 @@ W tym przewodniku pokazuję, jak zbudować kompletny system Raspberry Pi zasilan
 - jakiś menedżer baterii (używam DF Robot Sun Power Manager 5v 1.1)
 - panel słoneczny (używam monokrystalicznego panelu słonecznego 5V / 1A)
 
-**Znaczniki czasowe wideo:**
+## Przegląd
 
-- 00:00 - Intro
-- 00:13 - Teaser
-- 00:32 - Przegląd mózgu i serca
-- 00:54 - Wprowadzenie do teorii słońca i energii słonecznej
-- 1:52 - Dlaczego energia słoneczna jest fajna
-- 2:55 - Przegląd modelu AI
-- 3:15 - Konfiguracja
-- 3:57 - Test surowego systemu
-- 4:23 - Dodanie baterii i menedżera
-- 5:13 - Finalny rezultat
-- 6:45 - Outro
+W tym projekcie postanowiłem udowodnić, że można uruchomić nowoczesną sztuczną inteligencję — w szczególności duże modele językowe (LLM) — całkowicie poza siecią, używając wyłącznie energii słonecznej. Sercem systemu jest Raspberry Pi Zero 2W, niezwykle mały, ale dość wydajny „mózg”, który zasiliłem za pomocą modułu fotowoltaicznego o mocy (w teorii) 6W. Aby AI mogło działać na tak ograniczonym sprzęcie (512 MB pamięci RAM), wykorzystałem Ollama do uruchomienia wysoce zoptymalizowanej 8-bitowej skwantyzowanej wersji modelu od unsloth (135M parametrów), która okazała się zaskakująco responsywna w przypadku podstawowych zapytań.
+
+Podczas budowy zmierzyłem się z nieodłącznymi ograniczeniami energii słonecznej, takimi jak niespójność energetyczna wynikająca z pogody i lokalizacji. Chociaż bezpośrednie połączenie panelu z Raspberry Pi działało w pełnym słońcu, system natychmiast ulegał awarii, gdy nadchodziła choćby jedna chmura. Aby to rozwiązać, zintegrowałem warstwę zasilania awaryjnego składającą się z baterii LiPo i modułu DFRobot Sun Power Manager 5V. Ta płytka jest kluczowa, ponieważ posiada funkcję MPPT (Maximum Power Point Tracking) — technologię, która optymalizuje napięcie w celu wydobycia maksymalnej możliwej mocy z panelu, zwiększając wydajność nawet o 30%. [szczegóły MPPT](https://en.wikipedia.org/wiki/Maximum_power_point_tracking)
+
+Końcowe wyniki dały fascynujący wgląd w wydajność „zielonej” sztucznej inteligencji. Przy mocnym obciążeniu Raspberry Pi zużywa około 2,5 W, a moje obliczenia wykazały, że 10 godzin światła słonecznego może wyprodukować wystarczającą ilość energii na około 4 do 5 godzin ciągłej generacji AI. Chociaż model tej wielkości ma swoje ograniczenia, projekt z powodzeniem demonstruje schemat autonomicznego, cichego i zrównoważonego przetwarzania danych w odległych lokalizacjach, do których sieć energetyczna po prostu nie dociera.
+
 
 ## Dlaczego energia słoneczna dla Raspberry Pi?
 
@@ -47,24 +38,6 @@ Energia słoneczna oferuje kilka przekonujących zalet dla zasilania systemów w
 - **Opłacalność**: Po początkowej inwestycji energia jest całkowicie darmowa
 - **Wartość edukacyjna**: Nauka o zarządzaniu energią i zrównoważonej technologii
 - **Niezawodność**: Z odpowiednim backupem baterii system działa 24/7
-
-## Kwestie zasilania
-
-Uruchamianie modelu AI na energii słonecznej wymaga starannego zarządzania energią:
-
-- **Wymiarowanie panelu słonecznego**: Musi zapewniać wystarczającą moc w ciągu dnia, aby uruchomić system I naładować baterie
-- **Pojemność baterii**: Powinna przechowywać wystarczająco energii na nocną pracę
-- **Efektywność**: Optymalizuj oprogramowanie, aby zminimalizować pobór mocy
-
-## Wyzwania i rozwiązania
-
-### Wyzwanie: Ograniczona moc obliczeniowa
-
-**Rozwiązanie**: Użyj mocno skwantyzowanych modeli i optymalizuj parametry inferencji dla możliwości Pi Zero 2W.
-
-### Wyzwanie: Zależność od pogody
-
-**Rozwiązanie**: Wymiaruj pakiet baterii na tyle duży, aby obsłużyć kilka dni złej pogody.
 
 ## Rezultaty
 
@@ -100,12 +73,8 @@ Kluczowe wnioski:
 
 To reprezentuje krok w kierunku bardziej przyjaznego dla środowiska przetwarzania i demonstruje, że odnawialna energia może zasilać nawet wymagające obliczeniowo aplikacje jak inferencja AI.
 
+Dla więcej szczegółów, fragmentów kodu i linków do komponentów sprawdź opis wideo.
+
 ## Ograniczenia
 
 Nie oczekuj, że będziesz tam hostować ChatGPT, ma tylko 512MB RAM :D
-
-## Zasoby
-
-Obejrzyj pełny samouczek wideo: [Raspberry Pi zasilane energią słoneczną - Uruchamianie LLM](https://youtu.be/nEuxC46m250)
-
-Dla więcej szczegółów, fragmentów kodu i linków do komponentów sprawdź opis wideo.
