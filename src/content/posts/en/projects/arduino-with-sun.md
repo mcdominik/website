@@ -1,7 +1,7 @@
 ---
 title: How to Run AI on Raspberry Pi Zero 2W with Solar Energy with Battery Backup?
 h1: Raspberry Pi Powered by Solar Energy
-description: "A complete guide to hosting a small LLM on Raspberry Pi Zero 2W using pure solar energy and battery backup with a smart PPTP battery manager. Learn how to build a sustainable, off-grid AI system."
+description: A complete guide to hosting a small LLM on Raspberry Pi Zero 2W using pure solar energy and battery backup with a smart PPTP battery manager. Learn how to build a sustainable, off-grid AI system.
 date: "2025-12-29"
 image: /img/posts/raspberry-with-sun.webp
 ---
@@ -77,5 +77,3 @@ For more details, code snippets, and component links, check the video descriptio
 ## Limitations
 
 Don't expect to host ChatGPT there, it has 512MB RAM :D
-
-

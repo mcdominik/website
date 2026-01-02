@@ -1,7 +1,7 @@
 ---
 title: Arduino uruchamia model uczenia maszynowego (TensorflowLite/LiteRT)
 h1: Jak uruchomić model uczenia maszynowego na Arduino?
-description: Jak uruchomić model uczenia maszynowego na Arduino przy użyciu TensorflowLite/LiteRT.
+description: Kompletny przewodnik jak uruchomić model uczenia maszynowego na Arduino przy użyciu TensorflowLite/LiteRT.
 date: "2025-01-21"
 image: /img/posts/arduino-machine-learning.webp
 ---
@@ -19,7 +19,7 @@ To krótki przewodnik wyjaśniający, jak uruchomić model uczenia maszynowego n
 
 ## Przegląd
 
-W tym projekcie rzucam wyzwanie idei, że sztuczna inteligencja wymaga ogromnej mocy obliczeniowej, uruchamiając model rozpoznawania głosu w czasie rzeczywistym na Arduino Nano. W przeciwieństwie do tradycyjnych komputerów, ten mikrokontroler nie posiada systemu operacyjnego i ma tylko 20 KB pamięci RAM, a mimo to z powodzeniem identyfikuje słowa kluczowe do sterowania sprzętem. To podejście „TinyML” zużywa 3000 razy mniej energii niż standardowy komputer PC. Pozwala to na implementacje taniej sztuczna inteligencja wbudowanej w przedmioty codziennego użytku, takie jak pralki czy lampy.
+W tym projekcie rzucam wyzwanie idei, że sztuczna inteligencja wymaga ogromnej mocy obliczeniowej, uruchamiając model rozpoznawania głosu w czasie rzeczywistym na Arduino Nano. W przeciwieństwie do tradycyjnych komputerów, ten mikrokontroler nie posiada systemu operacyjnego i ma tylko 20 KB pamięci RAM, a mimo to z powodzeniem identyfikuje słowa kluczowe do sterowania sprzętem. To podejście „TinyML” zużywa 3000 razy mniej energii niż standardowy komputer PC. Pozwala to na implementacje taniej sztucznej inteligencji wbudowanej w przedmioty codziennego użytku, takie jak pralki czy lampy.
 
 Wyzwanie Techniczne
 Uruchamianie AI na tak ograniczonym sprzęcie wymaga przezwyciężenia dwóch głównych problemów:
@@ -41,7 +41,6 @@ Załadowałem model przy użyciu biblioteki TensorFlow Lite (LiteRT). Proces odb
 - Inferencja: Model o rozmiarze 20 KB działa na układzie, aby przewidzieć słowo kluczowe.
 
 - Akcja: Wynik jest mapowany na wyjście sprzętowe (kolor diody LED).
-
 
 ## Podsumowanie
 

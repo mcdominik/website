@@ -1,7 +1,7 @@
 ---
 title: Arduino runs Machine Learning Model (TensorflowLite/LiteRT)
 h1: How to Run Machine Learning Model on Arduino?
-description: How to run machine learning model on Arduino using TensorflowLite/LiteRT.
+description: A complete guide how to run machine learning model on Arduino using TensorflowLite/LiteRT.
 date: "2025-01-21"
 image: /img/posts/arduino-machine-learning.webp
 ---
@@ -41,7 +41,6 @@ I loaded the model using the TensorFlow Lite (LiteRT) library. The process follo
 - Inference: The 20 KB model runs on the chip to predict the keyword.
 
 - Action: The result is mapped to a hardware output (the LED color).
-
 
 ## Conclusion
 
