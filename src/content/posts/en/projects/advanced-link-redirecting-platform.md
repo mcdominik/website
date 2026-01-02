@@ -1,5 +1,5 @@
 ---
-title: Free Link Redirecting Platform: Open-Source Dynamic QR Engine
+title: "Free Link Redirecting Platform: Open-Source Dynamic QR Engine"
 h1: Free Link Redirecting Platform
 description: A complete guide how to create self-hosted dynamic QR code generator and URL shortener. Full-stack TypeScript app built with Next.js and NestJS. Features high-performance caching, IoT device integration, and real-time analytics.
 date: "2025-11-26"

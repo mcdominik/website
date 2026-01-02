@@ -1,5 +1,5 @@
 ---
-title: Darmowa Platforma Przekierowań: Silnik Dynamicznych Kodów QR Open-Source
+title: "Darmowa Platforma Przekierowań: Silnik Dynamicznych Kodów QR Open-Source"
 h1: Darmowa Platforma Przekierowań URL
 description: Kompletny przewodnik jak zrobić (self-hosted) dynamiczny generator kodów QR i skracacz linków. Aplikacja full-stack TypeScript zbudowana w oparciu o Next.js i NestJS. Oferuje wysokowydajne buforowanie, integrację z urządzeniami IoT i analitykę w czasie rzeczywistym.
 date: "2025-11-26"
