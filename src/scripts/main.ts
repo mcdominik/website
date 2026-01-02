@@ -4,6 +4,7 @@ import { initMobileMenu } from './modules/mobile-menu';
 import { initSearch } from './modules/search';
 import { highlightActiveTags } from './modules/tags';
 import { initThemeSwitchers } from './modules/theme';
+import { setupYouTubeTracking } from './modules/youtube-tracking';
 
 let bannerLogged = false;
 let initialized = false;
@@ -53,6 +54,7 @@ const runModules = () => {
   highlightActiveTags();
   initMobileMenu();
   initCodeEnhance();
+  setupYouTubeTracking();
 };
 
 const initApp = () => {
