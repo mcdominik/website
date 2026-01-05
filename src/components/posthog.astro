@@ -38,5 +38,12 @@
       }),
       (e.__SV = 1));
   })(document, window.posthog || []);
-  posthog.init('phc_CgqyWSbazXbObfKN9bMqBtePzIbABhlulSZIYC2RNYk', { api_host: 'https://eu.i.posthog.com', defaults: '2025-05-24' });
+  
+  // Only initialize PostHog if not on localhost
+  if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    posthog.init('phc_CgqyWSbazXbObfKN9bMqBtePzIbABhlulSZIYC2RNYk', { 
+      api_host: 'https://eu.i.posthog.com', 
+      defaults: '2025-05-24' 
+    });
+  }
 </script>
