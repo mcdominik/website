@@ -9,10 +9,11 @@ import {
   groupPostsByLocales,
   type PostEntry,
 } from '@lib/content';
-import { DEFAULT_LOCALE, listNonDefaultLocales, normalizeLocale } from '@lib/language';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, normalizeLocale } from '@lib/language';
+import { ensureTrailingSlash } from '@utils/url';
 
 export async function getStaticPaths({ paginate }) {
-  const locales = listNonDefaultLocales();
+  const locales = SUPPORTED_LOCALES;
   const categories = getEnabledCategoryIds();
 
   const paths = await Promise.all(
@@ -34,8 +35,15 @@ export async function getStaticPaths({ paginate }) {
   return paths.flat();
 }
 
+const { lang, category, page: pageParam } = Astro.params;
+
+if (lang === DEFAULT_LOCALE) {
+  const suffix = pageParam ? `/${pageParam}` : '';
+  return Astro.redirect(ensureTrailingSlash(`/${category}${suffix}`));
+}
+
 const { page } = Astro.props;
-const { lang, category: categorySegment } = Astro.params;
+const categorySegment = category;
 const posts = page.data as PostEntry[];
 
 const locale = normalizeLocale(lang);

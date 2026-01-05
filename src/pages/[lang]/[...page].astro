@@ -2,10 +2,11 @@
 import PostsList from '@layouts/PostsList.astro';
 import siteConfig from '@config/site';
 import { groupPostsByLocales, type PostEntry } from '@lib/content';
-import { listNonDefaultLocales, normalizeLocale } from '@lib/language';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, normalizeLocale } from '@lib/language';
+import { ensureTrailingSlash } from '@utils/url';
 
 export async function getStaticPaths({ paginate }) {
-  const locales = listNonDefaultLocales();
+  const locales = SUPPORTED_LOCALES;
   const groups = await groupPostsByLocales(locales);
 
   return groups.flatMap((group) =>
@@ -16,8 +17,14 @@ export async function getStaticPaths({ paginate }) {
   );
 }
 
+const { lang, page: pageParam } = Astro.params;
+
+if (lang === DEFAULT_LOCALE) {
+  const suffix = pageParam ? `/${pageParam}` : '';
+  return Astro.redirect(ensureTrailingSlash(suffix || '/'));
+}
+
 const { page } = Astro.props;
-const { lang } = Astro.params;
 const posts = page.data as PostEntry[];
 
 const locale = normalizeLocale(lang);

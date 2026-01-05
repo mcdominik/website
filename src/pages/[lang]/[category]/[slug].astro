@@ -7,10 +7,11 @@ import {
   getPostSlug,
   getPosts,
 } from '@lib/content';
-import { listNonDefaultLocales } from '@lib/language';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '@lib/language';
+import { ensureTrailingSlash } from '@utils/url';
 
 export async function getStaticPaths() {
-  const locales = listNonDefaultLocales();
+  const locales = SUPPORTED_LOCALES;
 
   const paths = await Promise.all(
     locales.map(async (locale) => {
@@ -27,6 +28,12 @@ export async function getStaticPaths() {
   );
 
   return paths.flat();
+}
+
+const { lang, category, slug } = Astro.params;
+
+if (lang === DEFAULT_LOCALE) {
+  return Astro.redirect(ensureTrailingSlash(`/${category}/${slug}`));
 }
 
 const { entry } = Astro.props;

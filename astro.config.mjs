@@ -37,7 +37,15 @@ export default defineConfig({
       ],
     }),
     sitemap({
-      filter: (page) => !page.includes('404'),
+      filter: (page) => {
+        if (page.includes('404')) return false;
+
+        // Exclude default language redirect pages from sitemap
+        const url = new URL(page);
+        if (url.pathname.startsWith(`/${defaultLanguage}/`)) return false;
+
+        return true;
+      },
       serialize: (item) => {
         const url = item.url.endsWith('/') ? item.url : `${item.url}/`;
         const isHomepage = url === siteUrl + '/';
