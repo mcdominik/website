@@ -31,10 +31,12 @@ const createCopyButton = (code: HTMLElement) => {
 
   button.addEventListener('click', async () => {
     const textToCopy = code.textContent ?? '';
+    const language = (button.closest('pre') as HTMLElement | null)?.dataset.language ?? null;
 
     try {
       await navigator.clipboard.writeText(textToCopy);
       button.classList.add('copied');
+      window.posthog?.capture('code_copied', { language });
     } catch (error) {
       const textArea = document.createElement('textarea');
       textArea.value = textToCopy;
@@ -46,6 +48,7 @@ const createCopyButton = (code: HTMLElement) => {
       try {
         document.execCommand('copy');
         button.classList.add('copied');
+        window.posthog?.capture('code_copied', { language });
       } catch (fallbackError) {
         console.error('Fallback copy failed:', fallbackError);
       }

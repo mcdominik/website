@@ -186,6 +186,7 @@ export const initLanguageSwitcher = () => {
         localStorage.setItem(STORAGE_KEY, lang);
         sessionStorage.removeItem(REDIRECT_KEY);
         closeSwitcher(switcher);
+        window.posthog?.capture('language_switched', { to_language: lang });
       });
     });
   });

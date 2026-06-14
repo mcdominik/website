@@ -49,7 +49,9 @@ const attachSystemPreferenceListener = (() => {
 
 const handleThemeToggle = () => {
   const isDark = document.documentElement.classList.contains('dark-mode');
-  applyThemeMode(isDark ? 'light' : 'dark');
+  const newTheme = isDark ? 'light' : 'dark';
+  applyThemeMode(newTheme);
+  window.posthog?.capture('theme_toggled', { new_theme: newTheme });
 };
 
 export const initThemeSwitchers = () => {

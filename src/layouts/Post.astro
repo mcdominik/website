@@ -194,6 +194,14 @@ const breadcrumbList = {
 
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />
 
+  <script is:inline define:vars={{ postTitle: entry.data.title, postCategory: categoryKey, postLang: lang }}>
+    window.posthog?.capture('post_viewed', {
+      post_title: postTitle,
+      category: postCategory,
+      language: postLang,
+    });
+  </script>
+
   {siteConfig.features.imageLightbox && (
     <>
       <div id="lightbox" class="lightbox" data-site-url={siteConfig.siteUrl}>

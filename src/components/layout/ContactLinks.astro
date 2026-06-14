@@ -40,6 +40,7 @@ const classNames = ['contact', ...baseClasses.filter(Boolean)];
         target="_blank"
         class="box-links__link"
         data-contact-id={link.id ?? undefined}
+        data-contact-name={link.name}
       >
         {link.iconSvg ? (
           <span class="icon" aria-hidden="true" set:html={link.iconSvg}></span>
@@ -51,3 +52,17 @@ const classNames = ['contact', ...baseClasses.filter(Boolean)];
     ))}
   </div>
 </div>
+
+<script is:inline>
+  document.querySelectorAll('.box-links__link[data-contact-name]').forEach(function(link) {
+    if (link.dataset.contactTracked === 'true') return;
+    link.dataset.contactTracked = 'true';
+    link.addEventListener('click', function() {
+      window.posthog?.capture('contact_link_clicked', {
+        contact_id: link.dataset.contactId ?? null,
+        contact_name: link.dataset.contactName,
+        url: link.href,
+      });
+    });
+  });
+</script>
